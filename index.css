@@ -1,0 +1,288 @@
+body{
+    background-image: url(../Laboratorio-6/img/bosque\ miedo.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+.title {
+    color: aliceblue;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.cardContent {
+    width: 100%;
+    height: 150px;
+    background-color: rgba(179, 43, 43, 0.534);
+    
+}
+
+.buttonContent {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    background-color: rgba(255, 174, 0, 0.637);
+    width: 30%;
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+
+.imgVoid {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 50px;
+    margin-left: 15%;
+}
+
+.calabaza {
+    height: 500px;
+    width: 500px;
+}
+
+.textoGrande {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto {
+    color: aliceblue;
+    font-size: 100px;
+}
+
+.contentP1 {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1-1 {
+    background-color: aqua;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+
+
+.ilu1-1 {
+    height: 250px;
+    width: 250px;
+    margin-left: 12%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.textoHistoria1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.textoH1 {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+/* Estilos exclusivos de la página 1. */
+body.pagina1 {
+    display: block;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url("img/bosque miedo.webp");
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.pagina1 .cardContent { height: 134px; overflow: hidden; }
+.pagina1 .title { margin: 17px 0 10px; font-size: 32px; line-height: 36px; }
+.pagina1 .buttonContent { height: 37px; gap: 36px; padding: 0 34px; }
+.pagina1 .buttonContent button {
+    flex: 1;
+    min-width: 0;
+    height: 37px;
+    margin: 0;
+    border: 2px solid #b4a18c;
+    font-size: 24px;
+    cursor: pointer;
+}
+.pagina1 .buttonContent button:hover { background-color: rgba(255, 187, 33, 0.85); }
+.pagina1 .buttonContent button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+.historia-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 604px) minmax(0, 1fr);
+    gap: 30px;
+    padding: 20px 30px 30px;
+    align-items: start;
+}
+.historia-imagenes { display: flex; flex-direction: column; align-items: center; gap: 77px; }
+.jinete-bosque { width: 192px; height: 194px; object-fit: cover; }
+.jinete-calabaza { width: 160px; height: 200px; object-fit: contain; }
+.historia-relato {
+    box-sizing: border-box;
+    min-height: 482px;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.28;
+}
+.historia-relato p { margin: 0 0 28px; }
+.historia-relato p:last-child { margin-bottom: 22px; }
+.historia-imagen-derecha { padding-top: 125px; display: flex; justify-content: center; }
+.historia-imagen-derecha img { width: 216px; height: 137px; object-fit: cover; object-position: center 30%; }
+@media (max-width: 1000px) {
+    .historia-layout { grid-template-columns: 150px minmax(0, 1fr); gap: 20px; padding: 20px; }
+    .jinete-bosque { width: 150px; height: 160px; }
+    .historia-imagen-derecha { grid-column: 1; padding-top: 0; }
+    .historia-imagen-derecha img { width: 150px; height: 110px; }
+    .historia-relato { grid-column: 2; grid-row: 1 / 3; font-size: 19px; padding: 8px; }
+    .pagina1 .buttonContent { gap: 16px; padding: 0 20px; }
+    .pagina1 .buttonContent button { font-size: 20px; }
+}
+@media (max-width: 600px) {
+    .pagina1 .buttonContent { gap: 8px; padding: 0 10px; }
+    .pagina1 .buttonContent button { font-size: 15px; }
+    .historia-layout { display: flex; flex-direction: column; padding: 20px 14px; }
+    .historia-imagenes { flex-direction: row; justify-content: space-evenly; gap: 15px; width: 100%; }
+    .jinete-bosque, .jinete-calabaza { width: 125px; height: 145px; }
+    .historia-relato { min-height: auto; font-size: 18px; }
+    .historia-imagen-derecha { width: 100%; }
+}
+
+/* Página 2: curiosidades. */
+body.pagina2 {
+    display: block;
+    min-height: 100vh;
+    background-image: url("img/bosque miedo.webp");
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.pagina2 .cardContent { height: 137px; overflow: hidden; }
+.pagina2 .title { margin: 17px 0 10px; font-size: 32px; line-height: 36px; }
+.pagina2 .buttonContent { height: 37px; gap: 36px; padding: 0 35px; }
+.pagina2 .buttonContent button {
+    flex: 1;
+    min-width: 0;
+    height: 37px;
+    margin: 0;
+    border: 2px solid #b4a18c;
+    font-size: 24px;
+    cursor: pointer;
+}
+.pagina2 .buttonContent button:hover { background-color: rgba(255, 187, 33, 0.85); }
+.pagina2 .buttonContent button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+.curiosidades { color: #f5f5f5; font-family: Arial, Helvetica, sans-serif; text-align: center; padding: 4px 30px 70px; }
+.curiosidades h2 { margin: 0 0 14px; font-size: 34px; font-weight: 400; line-height: 1.4; }
+.curiosidades-layout {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 164px auto;
+    align-items: start;
+}
+.curiosidades-adaptaciones { margin: 25px 0 0; font-size: 29px; line-height: 1.35; }
+.curiosidades-portadas { display: flex; justify-content: center; gap: 14px; padding-right: 40px; }
+.curiosidades-portadas img { display: block; width: 135px; height: 186px; object-fit: fill; }
+.curiosidades-hector { display: block; width: 240px; height: 233px; object-fit: cover; justify-self: center; transform: translateX(-55px); }
+.curiosidades-actor { margin: 88px 30px 0 -140px; font-size: 36px; line-height: 1.26; }
+@media (max-width: 1100px) {
+    .curiosidades-layout { grid-template-columns: 1fr 1fr; grid-template-rows: 210px auto; gap: 20px; }
+    .curiosidades-adaptaciones { font-size: 24px; }
+    .salto-escritorio { display: none; }
+    .curiosidades-portadas { gap: 8px; padding-right: 0; }
+    .curiosidades-portadas img { width: 30%; height: auto; aspect-ratio: 135 / 186; }
+    .curiosidades-hector { transform: none; }
+    .curiosidades-actor { margin: 30px 0 0; font-size: 29px; }
+}
+@media (max-width: 600px) {
+    .pagina2 .buttonContent { gap: 8px; padding: 0 10px; }
+    .pagina2 .buttonContent button { font-size: 15px; }
+    .curiosidades { padding: 8px 16px 30px; }
+    .curiosidades h2 { font-size: 30px; }
+    .curiosidades-layout { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+    .curiosidades-adaptaciones { margin: 0; font-size: 22px; }
+    .curiosidades-portadas { width: 100%; }
+    .curiosidades-hector { max-width: 100%; height: auto; }
+    .curiosidades-actor { margin: 0; font-size: 25px; }
+}
+
+/* Página 3: avistamientos y comentarios. */
+body.pagina3 {
+    display: block;
+    min-height: 100vh;
+    background-image: url("img/bosque miedo.webp");
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.pagina3 .cardContent { height: 137px; overflow: hidden; }
+.pagina3 .title { margin: 17px 0 10px; font-size: 32px; line-height: 36px; }
+.pagina3 .buttonContent { height: 37px; gap: 36px; padding: 0 35px; }
+.pagina3 .buttonContent button {
+    flex: 1;
+    min-width: 0;
+    height: 37px;
+    margin: 0;
+    border: 2px solid #b4a18c;
+    font-size: 24px;
+    cursor: pointer;
+}
+.pagina3 button:hover { background-color: rgba(255, 187, 33, 0.85); }
+.pagina3 button:focus-visible, .avistamientos-form input:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+.avistamientos { position: relative; padding: 8px 18px 50px; color: #f5f5f5; font-family: Arial, Helvetica, sans-serif; }
+.avistamientos-decoracion { position: absolute; object-fit: contain; pointer-events: none; }
+.avistamientos-miedo { width: 105px; height: 118px; left: 11%; top: -7px; transform: rotate(-18deg); }
+.avistamientos-ojos { width: 105px; height: 83px; right: 7%; top: 37px; }
+.avistamientos h2 { margin: 0 0 6px; text-align: center; font-size: 34px; font-weight: 400; }
+.avistamientos-form { display: flex; justify-content: center; align-items: center; gap: 8px; }
+.avistamientos-form label { font-size: 20px; }
+.avistamientos-form input { box-sizing: border-box; width: 462px; height: 41px; border: 0; border-radius: 30px; background: #c7d1d9; padding: 8px 18px; font: inherit; color: #171717; }
+.avistamientos-form button { width: auto; height: 39px; margin: 0; padding: 0 18px; font-size: 18px; border: 2px solid #b4a18c; cursor: pointer; }
+.avistamientos-estado { min-height: 19px; margin: 8px 0 4px; text-align: center; font-size: 14px; }
+.avistamientos-lista { display: grid; gap: 24px; padding-right: 45px; }
+.avistamiento { display: grid; grid-template-columns: 63px minmax(0, 1fr); gap: 9px; align-items: start; }
+.avistamiento-avatar { width: 63px; height: 63px; border-radius: 50%; object-fit: cover; margin-top: 20px; }
+.avistamiento-avatar-invitado { display: flex; justify-content: center; align-items: center; background: #c7d1d9; color: #263238; font-size: 20px; }
+.avistamiento-contenido h3 { margin: 0 0 0 22px; font-size: 16px; font-weight: 400; line-height: 20px; }
+.avistamiento-contenido p { box-sizing: border-box; min-height: 88px; margin: 0; padding: 28px 14px; border-radius: 36px; background: rgba(199, 209, 217, 0.45); color: #111; font-size: 20px; line-height: 1.6; overflow-wrap: anywhere; white-space: pre-wrap; }
+@media (max-width: 700px) {
+    .avistamientos-miedo { width: 55px; height: 65px; left: 16px; top: 0; }
+    .avistamientos-ojos { width: 55px; height: 44px; right: 16px; top: 12px; }
+    .pagina3 .buttonContent { gap: 8px; padding: 0 10px; }
+    .pagina3 .buttonContent button { font-size: 15px; }
+    .avistamientos-form { flex-wrap: wrap; }
+    .avistamientos-form label { width: 100%; text-align: center; }
+    .avistamientos-form input { width: min(100%, 462px); flex: 1; min-width: 140px; }
+    .avistamientos-lista { padding-right: 0; }
+    .avistamiento { grid-template-columns: 45px minmax(0, 1fr); }
+    .avistamiento-avatar { width: 45px; height: 45px; }
+    .avistamiento-contenido p { padding: 20px 16px; font-size: 18px; }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+    .avistamientos-miedo { width: 65px; height: 70px; left: 24px; top: -12px; }
+    .avistamientos-ojos { width: 65px; height: 52px; right: 24px; top: 0; }
+    .avistamientos-form input { width: min(40vw, 462px); }
+}
