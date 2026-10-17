@@ -55,7 +55,7 @@ button {
 }
 
 .textoGrande {
-    width: 100%;
+    min-width: 0;
     height: 100%;
     display: flex;
     align-items: center;
@@ -285,4 +285,64 @@ body.pagina3 {
     .avistamientos-miedo { width: 65px; height: 70px; left: 24px; top: -12px; }
     .avistamientos-ojos { width: 65px; height: 52px; right: 24px; top: 0; }
     .avistamientos-form input { width: min(40vw, 462px); }
+}
+
+/* Integración Bootstrap: los contenedores crecen y el menú se adapta al celular. */
+body.responsive-page {
+    display: block;
+    min-height: 100vh;
+    background-image: url("img/bosque miedo.webp");
+    background-position: center top;
+    background-attachment: fixed;
+}
+.responsive-page .cardContent { height: auto; overflow: visible; padding: 1px 0 14px; }
+.responsive-page .title { margin: 16px 0 12px; font-size: 2rem; line-height: 1.2; }
+.site-navbar { padding: 0 16px; }
+.site-navbar .navbar-brand { color: white; }
+.site-navbar .nav-link {
+    flex: 1;
+    text-align: center;
+    border: 2px solid #b4a18c;
+    border-radius: 24px;
+    background: #cc8c17;
+    color: #171717;
+    font-size: 1.1rem;
+}
+.site-navbar .nav-link:hover, .site-navbar .nav-link.active { background: #ffc34d; color: #171717; }
+.site-navbar .nav-link.active { font-weight: bold; }
+.site-navbar .navbar-toggler {
+    width: auto; height: auto; margin: 0; padding: 8px 12px;
+    font-size: 1.25rem; background: #713126; border-radius: 8px;
+}
+.site-navbar a:focus-visible { outline: 3px solid white; outline-offset: 2px; }
+.responsive-page .imgVoid { margin: 0; }
+.responsive-page .calabaza { width: 100%; max-width: 500px; height: auto; }
+.responsive-page .textoGrande { height: auto; }
+.responsive-page .texto { font-size: clamp(2.5rem, 7vw, 6.25rem); text-align: center; }
+.responsive-page .historia-layout { display: flex; max-width: 1440px; padding: 20px 12px 30px; }
+.responsive-page .historia-imagenes { gap: 24px; }
+.responsive-page .historia-relato { min-height: auto; }
+.responsive-page .historia-imagen-derecha { padding-top: 24px; }
+.responsive-page .historia-layout img { max-width: 100%; }
+.responsive-page .curiosidades { padding: 20px 12px 40px; }
+.responsive-page .curiosidades-layout { display: flex; }
+.responsive-page .curiosidades-adaptaciones, .responsive-page .curiosidades-actor { margin: 0; font-size: clamp(1.25rem, 2.5vw, 2rem); }
+.responsive-page .curiosidades-portadas { gap: 8px; padding-right: 12px; }
+.responsive-page .curiosidades-portadas img { width: calc((100% - 16px) / 3); max-width: 135px; height: auto; object-fit: contain; }
+.responsive-page .curiosidades-hector { margin: auto; transform: none; height: auto; }
+.responsive-page .avistamientos { padding-top: 20px; }
+.responsive-page .avistamientos-form { margin-bottom: 0; }
+.responsive-page .avistamientos-form label { width: auto; margin: 0; }
+.responsive-page .avistamientos-form input { width: 100%; min-width: 0; height: auto; }
+.responsive-page .avistamientos-form button { width: 100%; height: auto; min-height: 42px; }
+.responsive-page .avistamientos-decoracion { display: none; }
+.responsive-page .avistamientos-lista { padding-right: 0; }
+@media (max-width: 767.98px) {
+    .site-navbar .navbar-collapse { padding-top: 12px; }
+    .responsive-page .historia-imagenes { flex-direction: row; justify-content: space-evenly; }
+    .responsive-page .historia-imagenes img { width: 42%; max-width: 160px; height: 170px; object-fit: contain; }
+    .responsive-page .historia-relato { font-size: 18px; }
+    .responsive-page .historia-imagen-derecha { padding-top: 0; }
+    .responsive-page .avistamientos-form label { text-align: left; }
+    .salto-escritorio { display: none; }
 }
